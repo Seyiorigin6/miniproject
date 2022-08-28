@@ -1,0 +1,198 @@
+<!doctypehtml>
+<html>
+    <head>
+	       <title>javascript day 1</title>
+		    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+	    <style type="text/css">
+		   body{
+		      background-color:skyblue;
+			  color:white;
+			  height:640px;
+			  }
+		   h2{
+		      text-align:center;
+			  margin-top:20px;
+		   }
+		   .container{
+		      background-color:blue;
+			  border:1px solid red;
+			  border-radius:5%;
+			  margin-top:30px;
+		   }
+		   
+		</style>
+		   </head>
+	<body >
+        <div class="container">
+		     <div class="row"><div class="col-12"><h2>Online Result checker</h2><div></div>
+			 <div class="row m-3">
+			      <div class="col-4">Subject</div>
+				  <div class="col-4">Score</div>
+				  <div class="col-4">Grade</div>	  
+			 </div>
+			 <div class="row mb-3 mt-3">
+			       <div class="col-4">Mathematics</div>
+				   <div class="col-4">
+				       <input type="text" onchange="
+					      var score= this.value;
+						  if(score>=70){
+						      document.getElementById('matgrade').value='A'
+						  }
+						  else if(score>=60&&score<=69){ document.getElementById('matgrade').value='B'}
+						  else if(score>=50&&score<60){ document.getElementById('matgrade').value='C'}
+						  else if(score>=45&&score<50){ document.getElementById('matgrade').value='D'}
+						  else if(score>=40&&score<=45){ document.getElementById('matgrade').value='E'}
+						  else{
+						      document.getElementById('matgrade').value='F'
+						  }
+					  " name="score" id="maths">
+				   </div>
+				   <div class="col-4">
+				       <input type="text" name="grade" id="matgrade">
+				   </div>
+			 </div>
+			 <div class="row mb-3 mt-3">
+			       <div class="col-4">English</div>
+				   <div class="col-4">
+				       <input type="text"  name="score" onchange="
+					   var score= this.value;
+						  if(score>=70){
+						      document.getElementById('enggrade').value='A'
+						  }
+						  else if(score>=60&&score<=69){ document.getElementById('enggrade').value='B'}
+						  else if(score>=50&&score<60){ document.getElementById('enggrade').value='C'}
+						  else if(score>=45&&score<50){ document.getElementById('enggrade').value='D'}
+						  else if(score>=40&&score<=45){ document.getElementById('enggrade').value='E'}
+						  else{
+						      document.getElementById('enggrade').value='F'
+						  }
+					   " id="eng">
+				   </div>
+				   <div class="col-4">
+				       <input type="text" name="grade" id="enggrade">
+				   </div>
+			 </div>
+			 <div class="row mb-3 mt-3">
+			       <div class="col">Physics</div>
+				   <div class="col">
+				       <input type="text" name="score" onchange="
+					    
+					   var score= this.value;
+						  if(score>=70){
+						      document.getElementById('phgrade').value='A'
+						  }
+						  else if(score>=60&&score<=69){ document.getElementById('phgrade').value='B'}
+						  else if(score>=50&&score<60){ document.getElementById('phgrade').value='C'}
+						  else if(score>=45&&score<50){ document.getElementById('phgrade').value='D'}
+						  else if(score>=40&&score<=45){ document.getElementById('phgrade').value='C'}
+						  else{
+						      document.getElementById('phgrade').value='F'
+						  }
+					   " id="ph">
+				   </div>
+				   <div class="col">
+				       <input type="text" name="grade" id="phgrade">
+				   </div>
+			 </div>
+			 <div class="row mb-3 mt-3">
+			       <div class="col">Chemistry</div>
+				   <div class="col">
+				       <input type="text" name="score" 
+					    onchange="
+					   var score= this.value;
+						  if(score>=70){
+						      document.getElementById('chgrade').value='A'
+						  }
+						  else if(score>=60&&score<=69){ document.getElementById('chgrade').value='B'}
+						  else if(score>=50&&score<60){ document.getElementById('chgrade').value='C'}
+						  else if(score>=45&&score<50){ document.getElementById('chgrade').value='D'}
+						  else if(score>=40&&score<=45){ document.getElementById('chgrade').value='C'}
+						  else{
+						      document.getElementById('chgrade').value='F'
+						  }" id="ch">
+				   </div>
+				   <div class="col">
+				       <input type="text" name="grade" id="chgrade">
+				   </div>
+			 </div>
+			 <div class="row mb-3 mt-3">
+			       <div class="col">Biology</div>
+				   <div class="col">
+				       <input type="text" name="score"  onchange="
+					   var score= this.value;
+						  if(score>=70){
+						      document.getElementById('biograde').value='A'
+						  }
+						  else if(score>=60&&score<=69){ document.getElementById('biograde').value='B'}
+						  else if(score>=50&&score<60){ document.getElementById('biograde').value='C'}
+						  else if(score>=45&&score<50){ document.getElementById('biograde').value='D'}
+						  else if(score>=40&&score<=45){ document.getElementById('biograde').value='C'}
+						  else{
+						      document.getElementById('biograde').value='F'
+						  }" id="bio">
+				   </div>
+				   <div class="col">
+				       <input type="text" name="grade" id="biograde">
+				   </div>
+			 </div>
+			 <div class="row">
+			    <div class="col">
+				      <button type="button" onclick="result()">Get Result</button>
+				</div>
+			 </div>
+			 <div class="row mb-3 mt-3">
+			    <div class="col-4">
+				  <p>TOTAL</p>
+				</div>
+				<div class="col-4">
+				    <p id="tot"></p>
+				</div>
+			  </div>
+			  <div class="row mb-t mt-3">
+			      <div class="col-4"><p>Average</p></div>
+				  <div class="col-4"><p id="aver"></p></div>
+			  </div>
+			  <div class="row mb-t mt-3" id="remark">
+			      <div class="col-4"><p>Remarks</p></div>
+				  <div class="col-4"><p id="mark"></p></div>
+				  
+			  </div>
+		</div>
+		<script type="text/javascript">
+		      function result(){
+			      var math=parseFloat(document.getElementById('maths').value)
+				  var eng=parseFloat(document.getElementById('eng').value)
+				  var ph=parseFloat(document.getElementById('ph').value)
+				  var ch=parseFloat(document.getElementById('ch').value)
+				  var bio=parseFloat(document.getElementById('bio').value)
+				   total=(math+eng+ph+ch+bio)
+				  document.getElementById('tot').innerHTML=total
+				  ave()
+			  } 
+			  function ave(){
+			      average=document.getElementById('aver').innerHTML= total/5;
+				  remark()
+			  }
+			  function remark(){
+			     if(average>70){
+				    document.getElementById('mark').innerHTML='Excellent!'	
+				 }
+				 else if(average>=60&&average<=69){
+				     document.getElementById('mark').innerHTML='Very good'	
+				 }
+				 else if(average>=50&&average<60){
+				    document.getElementById('mark').innerHTML='Good'    
+				 }
+				 else if(average>=45&&average<50){
+				      document.getElementById('mark').innerHTML='Below average'
+				 }
+				 else if(average>=40&&average<=45){
+				     document.getElementById('mark').innerHTML='Poor'
+				 }
+			   else{
+			      document.getElementById('mark').innerHTML='Failed!'
+			   }
+			  }
+		</script>
+	</body>
+</html>

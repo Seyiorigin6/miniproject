@@ -1,0 +1,27 @@
+<!doctypehtml>
+<html>
+    <head>
+	       <title>javascript day 1</title>
+		   </head>
+	<body>
+	      <h2>Online covid-19 self Asessment</h2>
+		   <p>Are you coughing?</p>
+		   <select id="cough">
+		         <option value="yes">Yes</option>
+	         <option value="no">NO</option>
+		   </select>
+		   <p>Did you travel out of Nigeria within the last 6 months?</p>
+		   <select id="travel">
+		         <option value="yeah">Yes</option>
+		         <option value="nah">NO</option>
+		   </select>
+		   <button onclick="
+		   var cough = document.getElementById('cough').value;
+		   var travel = document.getElementById('travel').value;
+		   if(cough =='no'&&travel=='nah'){alert('stay safe')}
+		   else{alert('Please go for test')}
+		   ">Diagnose</button>
+		   <script type="text/javascript">    
+		</script>   
+	</body>
+</html>

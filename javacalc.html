@@ -1,0 +1,32 @@
+<!doctypehtml>
+<html>
+    <head><title>java4</title>	   </head>
+	<body>
+	      <h2>Calculator</h2>
+		  <p>Number1</p>
+		  <input type="text" name="no2" id="no1"><br><br>
+		 <p>Number2</p>
+		 <input type="text" name="no1" id="no2"><br><br>
+		  <button onclick="add()">Add</button>
+		  <button onclick="substract()">Substract</button>
+		  <button onclick="modu()">%</button>
+		<script type="text/javascript">
+		    function add(){
+			    var no1=parseInt(document.getElementById('no1').value);
+				var no2=parseInt(document.getElementById('no2').value);
+				alert(no1+no2)
+			}
+			 function substract(){
+			  var no1=document.getElementById('no1').value;
+				var no2=document.getElementById('no2').value;
+				alert(no1-no2)
+			}
+			  function modu(){
+			   var no1=document.getElementById('no1').value;
+				var no2=document.getElementById('no2').value;
+				alert(no1%no2)
+			}
+			
+		</script>   
+	</body>
+</html>

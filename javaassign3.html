@@ -1,0 +1,35 @@
+<!doctypehtml>
+<html>
+    <head>
+	       <title>javascript day 1</title>
+		    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+	    <style type="text/css"></style>
+		   </head>
+	<body >
+        <h3 class="m-3 mb-1 ">Username</h3>
+	   <input type="text" id="name" class="m-3">
+       <h3 class="m-3">Password</h3>
+	   <input type="password" id="pwd" class="m-3">
+      <h3 class="m-3">Confirm password</h3>
+       <input type="password"id="pwd2" class="m-3"><br>
+      <button onclick="valid()" type="btn btn-warning" class="m-3">Register</button>
+	   
+		<script type="text/javascript">
+		       function valid(){
+			      var name=document.getElementById('name').value;
+				  var pwd=document.getElementById('pwd').value;
+				  var pwd2=document.getElementById('pwd2').value; 
+                 if(pwd==''||pwd==''){
+				     alert('Validation error')
+				  }
+				 else if(pwd==pwd2&&name!=''){
+				       alert('Registration successfull')
+				  }
+				  
+				  else{
+				     alert('Validation error')
+				  }
+			   }
+		</script>
+	</body>
+</html>

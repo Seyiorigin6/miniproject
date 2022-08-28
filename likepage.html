@@ -1,0 +1,20 @@
+<!doctypehtml>
+<html>
+    <head>
+	       <title>javascript day 1</title>
+		    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+	    <style type="text/css"></style>
+		   </head>
+	<body >
+     <button onclick="add()" id="btn">0 likes</button>	    
+		<script type="text/javascript">
+		    var no=1
+			function add(){
+			 if(no>1){
+			 document.getElementById('btn').innerHTML=no+' Likes';}
+			 else{ document.getElementById('btn').innerHTML=no+' Like';}
+			no=no+1
+			}	
+		</script>
+	</body>
+</html>

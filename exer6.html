@@ -1,0 +1,35 @@
+<!doctypehtml>
+<html>
+    <head>
+	       <title>javascript day 1</title>
+		    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+	    <style type="text/css"></style>
+		   </head>
+	<body style="background-color:orange">
+	      <h2>Online UTME Result checker</h2>
+		  <span>Have you written  the exam yet?</span>
+		  <select id ="exam">
+		        <option value="">Please select</option>
+			     <option value="yes">Yes</option>
+				 <option value="no">No</option>
+		  </select>
+		   <select id="center">
+		        <option value="">Please select exam center</option>
+			     <option value="Lagos">Lagos</option>
+				 <option value="ogun">ogun</option>
+				 <option value="kebbi">Kebbi</option>
+		  </select>
+		  <button onclick="
+		  var exam=document.getElementById('exam').value;
+          var center=document.getElementById('center').value;
+		  if(exam=='yes'&&center=='lagos'){alert('You scored 320')}
+		  else if(exam==''||center==''){alert('Please select an option')}
+		  else if(exam=='yes'&&center!='lagos'){alert('Result is not yet ready')}
+		  
+		  ">Get my result </button>
+		  <script type="text/javascript">
+		       
+			   
+		  </script>
+	</body>
+</html>
